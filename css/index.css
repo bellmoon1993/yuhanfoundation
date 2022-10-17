@@ -1,0 +1,1874 @@
+@charset "utf-8";
+
+/* 메인슬라이드 */
+#section1 { 
+    position : relative;
+    width : 100%; 
+    height : 700px;  
+    
+}
+#sliderList .slider { 
+    position : absolute; 
+    top : 0; 
+    left : 0; 
+    width : 100%; 
+    height : 700px; 
+    background : no-repeat center / cover; 
+    margin-top : 100px;
+}
+#sliderList .slider1 { background-image : url(../images/slide-bg1.jpg)}
+#sliderList .slider2 { background-image : url(../images/slide-bg2.jpg)}
+#sliderList .slider3 { background-image : url(../images/slide-bg3.jpg)}
+#sliderList .active { z-index : 9; }
+#sliderList div { 
+    position : relative; 
+    width : 100%; 
+    margin : 0 auto;  
+}
+.slider1 p {
+    position : absolute;
+    top : 380px;
+    left : 18vw;
+    font-size : 24px;
+    font-weight : bold;
+    color : #000;
+}
+.slider1 p span {
+    color : #23a600
+}
+.slider1 a {
+    display : block;
+    position : absolute;
+    width : 150px;
+    height : 30px;
+    top : 500px;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+    background : url(../images/icon/go_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y : 0.2em;
+}
+.slider2 p:nth-of-type(1) {
+    position : absolute;
+    top : 220px;
+    left : 18vw;
+    font-size : 24px;
+    font-weight : bold;
+    color : #000;
+}
+.slider2 p span {
+    color : #23a600
+}
+.slider2 p:nth-of-type(2) {
+    position : absolute;
+    top : 400px;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+}
+.slider2 a {
+    display : block;
+    position : absolute;
+    width : 150px;
+    height : 30px;
+    top : 520px;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+    background : url(../images/icon/go_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y : 0.2em;
+}
+.slider3 p {
+    position : absolute;
+    top : 330px;
+    right : 18vw;
+    width : 500px;
+    font-size : 24px;
+    color : #000;
+}
+#btnPos a { 
+    position: absolute; 
+    top: 55%; 
+    transform : translateY(0%);
+    z-index: 999;
+    width: 70px; 
+    height: 100px; 
+    color: #fff;
+    line-height: 90px; 
+    font-size: 70px; 
+    text-align: center; 
+}
+#btnPos a span { position : absolute; left : -9999px; }
+#btnPos a.prev { left: 100px; }
+#btnPos a.prev::after { content : url(../images/icon/slidePrev.png) }
+#btnPos a.next { right: 100px; }
+#btnPos a.next::after { content : url(../images/icon/slideNext.png) }
+#btnNum { 
+    display: flex;
+    position: absolute; 
+    width : 69vw;
+    height : 5px;
+    background: rgb(252, 252, 252, 0.5);
+    z-index: 99; 
+    left: 50%; 
+    bottom: -30px;
+    transform : translateX(-50%);
+     }
+#btnNum a { 
+    display: block; 
+    width: 23vw; 
+    height: 5px;
+    margin: 0; 
+    background: #fff; 
+    opacity: 0;
+    color: #000;
+    font-size: 16px; 
+    line-height: 50px; 
+    text-align: center; 
+    z-index: 999;
+}
+
+#btnNum a::after { 
+    position : absolute;
+    top : -22px;
+    left : -50px;
+    content: attr(data-index); 
+    opacity: 1;
+}
+#btnNum a.on { 
+    background: #23a600; 
+    opacity : 1;
+    color: #000; 
+    font-weight: bold; 
+}
+#btnNum a::after.on {
+    opacity: 1;
+}
+#btnNum a span { 
+    position: absolute; 
+    left: -9999px;  
+}
+#playBtn {
+    position : absolute;
+    bottom : -20px ;
+    left : 6vw;
+    z-index : 999;
+    text-indent: -4000px;
+}
+#playBtn .play {
+    position : absolute;
+    display : none;
+    width : 15px;
+    height : 18px;
+    border-top: 15px solid #000;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    transform: rotate(-90deg);
+    text-indent: -4000px;
+    color : transparent;
+}
+#playBtn .pause {
+    position : absolute;
+    display : block;
+    width : 15px;
+    height : 18px;
+    border-right : 5px solid #000;
+    border-left : 5px solid #000;
+    text-indent: -4000px;
+    color : transparent;
+}
+
+   /* 섹션 공통 */
+.wrap { width : 1200px; 
+    margin : 0 auto;
+    border : 1px solid transparent;}
+
+    /* 재단소개 */
+#section2 { 
+    position: relative;
+    width : 100%;
+    height : 400px;
+    background : #fff;
+    margin-top : 100px; 
+}
+.section2.wrap {
+    position: relative;
+    width : 1200px;
+    height : 400px;
+}
+.section2.wrap h3 {
+    position : absolute;
+    top : 71px;
+    left : 165px;
+    font-size : 36px;
+}
+.section2.wrap p {
+    position: absolute;
+    top : 170px;
+    left : 165px;
+    font-size : 20px;
+}
+.section2.wrap img {
+    position : absolute;
+    top : 40px;
+    right : 50px;
+    width : 340px;
+    height : 300px;
+    background-size: cover;
+}
+.section2.wrap a {
+    position: absolute;
+    display : block;
+    top : 278px;
+    left : 165px;
+    width : 165px;
+    width : 220px;
+    height : 50px;
+    background: #23a600;
+    color : #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 2rem;
+}
+
+    /* 장학사업 */  
+#section3 {
+    width : 100%;
+    height : 620px;
+    background : #7bd6a1;
+}
+.section3.wrap {
+    position: relative;
+    width : 1200px;
+    height : 620px;
+}
+.section3.wrap h3 {
+    position: absolute;
+    top : 105px;
+    left : 160px;
+    font-size: 36px;
+    color : #fff;
+}
+.section3.wrap img:nth-of-type(1) {
+    position: absolute;
+    top : 95px;
+    left : 69px;
+    width : 66px;
+    height : 78px;
+    background-size: cover;
+}
+.section3.wrap img:nth-of-type(2) {
+    position: absolute;
+    top : 139px;
+    right : 50px;
+    width : 400px;
+    height : 356px;
+    background-size: cover;
+} 
+.section3.wrap p {
+    position: absolute;
+    top : 265px;
+    left : 69px;
+    color : #fff;
+    font-size : 20px;
+    line-height: 40px;
+}
+.section3.wrap a:nth-of-type(1) {
+    position: absolute;
+    display : block;
+    top : 375px;
+    left : 89px;
+    color : #fff;
+    font-weight : 600;
+    box-sizing: content-box;
+    padding-bottom : 4px;
+    border-bottom : 2px solid #fff;
+}
+.section3.wrap a:nth-of-type(2) {
+    position : absolute;
+    display: block;
+    top : 440px;
+    left : 69px;
+    width : 200px;
+    height : 50px;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    line-height: 50px;
+    color : #000;
+    font-weight : 600;
+    box-sizing: content-box;
+    padding-right : 20px;
+}
+.section3.wrap a:nth-of-type(2)::after {
+    content : '';
+    position: absolute;
+    display : block;
+    top : 20px;
+    right : 30px;
+    width : 10px;
+    height : 10px;
+    border-right : 2px solid #000;
+    border-bottom : 2px solid #000;
+    transform: rotate(-45deg);
+}
+.section3.wrap a:nth-of-type(3) {
+    position : absolute;
+    display: block;
+    top : 440px;
+    left : 299px;
+    width : 200px;
+    height : 50px;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    line-height: 50px;
+    font-weight : 600;
+    color : #000;
+    box-sizing: content-box;
+    padding-right : 20px;
+}
+.section3.wrap a:nth-of-type(3)::after {
+    content : '';
+    position: absolute;
+    display : block;
+    top : 20px;
+    right : 30px;
+    width : 10px;
+    height : 10px;
+    border-right : 2px solid #000;
+    border-bottom : 2px solid #000;
+    transform: rotate(-45deg);
+}
+
+/* 교육지원사업 */
+#section4 {
+    width : 100%;
+    height : 620px;
+    background: #7baed6;
+}
+.section4.wrap {
+    position: relative;
+    width : 1200px;
+    height : 620px;
+}
+.section4.wrap h3 {
+    position: absolute;
+    top : 105px;
+    left : 160px;
+    font-size: 36px;
+    color : #fff;
+}
+.section4.wrap img:nth-of-type(1) {
+    position: absolute;
+    top : 95px;
+    left : 69px;
+    width : 66px;
+    height : 78px;
+    background-size: cover;
+}
+.section4.wrap img:nth-of-type(2) {
+    position: absolute;
+    top : 100px;
+    right : 50px;
+    width : 520px;
+    height : 356px;
+    background-size: cover;
+} 
+.section4.wrap p {
+    position: absolute;
+    top : 265px;
+    left : 69px;
+    color : #fff;
+    font-size : 20px;
+    line-height: 40px;
+}
+.section4.wrap a:nth-of-type(1) {
+    position: absolute;
+    display : block;
+    top : 375px;
+    left : 89px;
+    color : #fff;
+    font-weight : 600;
+    box-sizing: content-box;
+    padding-bottom : 4px;
+    border-bottom : 2px solid #fff;
+}
+
+/* 사회복지사업 */
+#section5 {
+    width : 100%;
+    height : 620px;
+    background: #fffea3;
+}
+.section5.wrap {
+    position: relative;
+    width : 1200px;
+    height : 620px;
+}
+.section5.wrap h3 {
+    position: absolute;
+    top : 105px;
+    left : 160px;
+    font-size: 36px;
+    color : #000;
+}
+.section5.wrap img:nth-of-type(1) {
+    position: absolute;
+    top : 95px;
+    left : 69px;
+    width : 66px;
+    height : 78px;
+    background-size: cover;
+}
+.section5.wrap img:nth-of-type(2) {
+    position: absolute;
+    top : 130px;
+    right : 150px;
+    width : 270px;
+    height : 356px;
+    background-size: cover;
+} 
+.section5.wrap p {
+    position: absolute;
+    top : 265px;
+    left : 69px;
+    color : #000;
+    font-size : 20px;
+    line-height: 40px;
+}
+.section5.wrap a:nth-of-type(1) {
+    position: absolute;
+    display : block;
+    top : 375px;
+    left : 89px;
+    color : #000;
+    font-weight : 600;
+    box-sizing: content-box;
+    padding-bottom : 4px;
+    border-bottom : 2px solid #000;
+}
+
+/* 봉사상시상 */
+
+#section6 {
+    width : 100%;
+    height : 620px;
+    background: #ffba4d;
+}
+.section6.wrap {
+    position: relative;
+    width : 1200px;
+    height : 620px;
+}
+.section6.wrap h3 {
+    position: absolute;
+    top : 105px;
+    left : 160px;
+    font-size: 36px;
+    color : #000;
+}
+.section6.wrap img:nth-of-type(1) {
+    position: absolute;
+    top : 95px;
+    left : 69px;
+    width : 74px;
+    height : 78px;
+    background-size: cover;
+}
+.section6.wrap img:nth-of-type(2) {
+    position: absolute;
+    top : 130px;
+    right : 50px;
+    width : 500px;
+    height : 356px;
+    background-size: cover;
+} 
+.section6.wrap p {
+    position: absolute;
+    top : 265px;
+    left : 69px;
+    color : #000;
+    font-size : 20px;
+    line-height: 40px;
+}
+.section6.wrap a:nth-of-type(1) {
+    position: absolute;
+    display : block;
+    top : 375px;
+    left : 89px;
+    color : #000;
+    font-weight : 600;
+    box-sizing: content-box;
+    padding-bottom : 4px;
+    border-bottom : 2px solid #000;
+}
+
+/* 재단활동소식 */
+#section7 {
+    position: relative;
+    width : 100%;
+    height : 620px;
+    background: #fff;
+}
+.section7.wrap {
+    position: relative;
+    width : 1200px;
+    height : 620px;
+}
+.section7.wrap ul {
+    width : 1200px;
+    height : 500px;
+    margin : 150px auto;
+}
+
+
+.section7.wrap ul li {
+    overflow : hidden;
+    transform : translateX(10%);
+}
+.section7.wrap ul li a img {
+    width : 300px;
+    height : 310px;
+    background-size: cover;
+}
+.section7.wrap ul li a span {
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: 0;
+    width: 300px;
+    height: 310px;
+    box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6),
+                inset 0 0 100px rgba(50, 30, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+.section7.wrap h3 {
+    position: absolute;
+    top : 58px;
+    left : 82px;
+    font-size: 36px;
+    color : #23a600;
+}
+.section7.wrap .newsPlus {
+    position: absolute;
+    top : 48px;
+    left : 330px;
+    font-size : 48px;
+    color : #8d8d8d;
+}
+.section7.wrap .newsPlus:hover {
+    color : #23a600;
+}
+
+.section7.wrap ul p:nth-of-type(1) {
+    font-size : 20px;
+    font-weight: 600;
+    color : #000;
+    margin-top: 20px;
+}
+.section7.wrap ul p:nth-of-type(2) {
+    font-size : 16px;
+    color : rgb(122, 122, 122);
+    margin-top: 20px;
+}
+
+
+.slideBtn3 {
+    position : absolute;
+    display : flex;
+    justify-content: space-between;
+    top : 70px;
+    right : 100px;
+    width : 70px;
+    height : 50px;
+}
+.newsPrev {
+    display : block;
+    width : 30px;
+    height : 30px;
+    background: url(../images/icon/prev_circle.png) no-repeat center / cover;
+    text-indent: -9999px;
+}
+.newsNext {
+    display : block;
+    width : 30px;
+    height : 30px;
+    background: url(../images/icon/next_circle.png) no-repeat center / cover;
+    text-indent: -9999px;
+}
+
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: 1;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+/* 공지사항 */
+#section8 {
+    position: relative;
+    width : 100%;
+    height : 620px;
+    background: #efffeb;
+}
+.section8.wrap {
+    position: relative;
+    width : 1200px;
+    height : 620px;
+}
+.section8.wrap ul {
+    width : 1200px;
+    height : 500px;
+    margin : 250px auto;
+}
+.section8.wrap ul li { 
+    border-top : 3px solid #000;
+}
+.section8.wrap h3 {
+    position: absolute;
+    top : 138px;
+    left : 82px;
+    font-size: 36px;
+    color : #23a600;
+}
+.section8.wrap .newsPlus {
+    position: absolute;
+    top : 128px;
+    left : 230px;
+    font-size : 48px;
+    color : #8d8d8d;
+}
+.section8.wrap .newsPlus:hover {
+    color : #23a600;
+}
+.section8.wrap li p {
+    margin : 24px 0;
+}
+.section8.wrap li p:nth-of-type(1) {
+    font-size : 24px;
+    font-weight : 600;
+    color : #000;
+}
+.section8.wrap li p:nth-of-type(2) {
+    font-size : 14px;
+    color : #8d8d8d;
+}
+.section8.wrap li p:nth-of-type(3) {
+    font-size : 14px;
+    color : #8d8d8d;
+}
+.noticePrev {
+    display : block;
+    width : 30px;
+    height : 30px;
+    background: url(../images/icon/prev_circle.png) no-repeat center / cover;
+    text-indent: -9999px;
+}
+.noticeNext {
+    display : block;
+    width : 30px;
+    height : 30px;
+    background: url(../images/icon/next_circle.png) no-repeat center / cover;
+    text-indent: -9999px;
+}
+
+@media screen and (max-width: 1200px) {
+
+/* 메인슬라이드 */
+#section1 { 
+    position : relative;
+    width : 100%; 
+    height : 80vh;  
+    
+}
+#sliderList .slider { 
+    position : absolute; 
+    top : 0; 
+    left : 0; 
+    width : 100%; 
+    height : 80vh; 
+    background : no-repeat center / cover; 
+    margin-top : 80px;
+}
+#sliderList .slider1 { background-image : url(../images/slide-bg1-middle.jpg)}
+#sliderList .slider2 { background-image : url(../images/slide-bg2-middle.jpg)}
+#sliderList .slider3 { background-image : url(../images/slide-bg3-middle.jpg)}
+#sliderList .active { z-index : 9; }
+#sliderList div { 
+    position : relative; 
+    width : 100%; 
+    margin : 0 auto;  
+}
+.slider1 p {
+    position : absolute;
+    top : 380px;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+}
+.slider1 p span {
+    color : #23a600
+}
+.slider1 a {
+    display : block;
+    position : absolute;
+    width : 150px;
+    height : 30px;
+    top : 500px;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+    background : url(../images/icon/go_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y : 0.2em;
+    transform: scale(0.8);
+}
+.slider2 p:nth-of-type(1) {
+    position : absolute;
+    top : 220px;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+}
+.slider2 p span {
+    color : #23a600
+}
+.slider2 p:nth-of-type(2) {
+    position : absolute;
+    top : 45vh;
+    left : 18vw;
+    font-size : 16px;
+    font-weight : bold;
+    color : #000;
+}
+.slider2 a {
+    display : block;
+    position : absolute;
+    width : 150px;
+    height : 30px;
+    top : 60vh;
+    left : 18vw;
+    font-size : 20px;
+    font-weight : bold;
+    color : #000;
+    background : url(../images/icon/go_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y : 0.2em;
+    transform: scale(0.8);
+}
+.slider3 p {
+    top : 35vh;
+    right : 2vw;
+    font-size : 16px;
+}
+.slider3 p span {
+    display : none;
+}
+#btnPos a { 
+    position: absolute; 
+    top: 55%; 
+    transform : translateY(0%);
+    z-index: 999;
+    width: 70px; 
+    height: 100px; 
+    color: #fff;
+    line-height: 90px; 
+    font-size: 70px; 
+    text-align: center; 
+}
+#btnPos a span { position : absolute; left : -9999px; }
+#btnPos a.prev { left: 100px; }
+#btnPos a.prev::after { content : url(../images/icon/slidePrev.png) }
+#btnPos a.next { right: 100px; }
+#btnPos a.next::after { content : url(../images/icon/slideNext.png) }
+#btnNum { 
+    display: flex;
+    position: absolute; 
+    width : 69vw;
+    height : 5px;
+    background: rgb(252, 252, 252, 0.5);
+    z-index: 99; 
+    left: 50%; 
+    bottom: -30px;
+    transform : translateX(-50%);
+     }
+#btnNum a { 
+    display: block; 
+    width: 23vw; 
+    height: 5px;
+    margin: 0; 
+    background: #fff; 
+    opacity: 0;
+    color: #000;
+    font-size: 16px; 
+    line-height: 50px; 
+    text-align: center; 
+    z-index: 999;
+}
+
+#btnNum a::after { 
+    position : absolute;
+    top : -22px;
+    left : -50px;
+    content: attr(data-index); 
+    opacity: 1;
+}
+#btnNum a.on { 
+    background: #23a600; 
+    opacity : 1;
+    color: #000; 
+    font-weight: bold; 
+}
+#btnNum a::after.on {
+    opacity: 1;
+}
+#btnNum a span { 
+    position: absolute; 
+    left: -9999px;  
+}
+#playBtn {
+    position : absolute;
+    bottom : -20px ;
+    left : 6vw;
+    z-index : 999;
+    text-indent: -700px;
+}
+#playBtn .play {
+    position : absolute;
+    display : none;
+    width : 15px;
+    height : 18px;
+    border-top: 15px solid #000;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    transform: rotate(-90deg);
+    text-indent: -700px;
+}
+#playBtn .pause {
+    position : absolute;
+    display : block;
+    width : 15px;
+    height : 18px;
+    border-right : 5px solid #000;
+    border-left : 5px solid #000;
+    text-indent: -700px;
+}
+
+
+     /* 섹션 공통 */
+.wrap { width : 80vw; 
+}
+
+/* 재단소개 */
+#section2 {
+    height : 37vh;
+}
+.section2.wrap {
+    width : 80vw;
+    height : 37vh;
+}
+.section2.wrap h3 {
+    top : 5vh;
+    left : 7vw;
+    font-size : 24px;
+}
+.section2.wrap p {
+    top : 15vh;
+    left : 7vw;
+    font-size : 16px;
+}
+.section2.wrap img {
+    top : 7vh;
+    right : 7vw;
+    width : 20vw;
+    height : 25vh;
+}
+.section2.wrap a {
+    top : 25vh;
+    left : 7vw;
+    width : 15vw;
+    height : 5vh;
+    line-height: 5vh;
+    font-size: 16px;
+}
+
+/* 장학사업 */  
+#section3 {
+    width : 100%;
+    height : 48vh;
+}
+.section3.wrap {
+    width : 80vw;
+    height : 48vh;
+}
+.section3.wrap h3 {
+    top : 7vh;
+    left : 13vw;
+    font-size: 24px;
+}
+.section3.wrap img:nth-of-type(1) {
+    top : 6vh;
+    left : 7vw;
+    width : 5vw;
+    height : 5vw;
+}
+.section3.wrap img:nth-of-type(2) {
+    top : 9vh;
+    right : 5vw;
+    width : 22vw;
+    height : 30vh;
+} 
+.section3.wrap p {
+    top : 18vh;
+    left : 7vw;
+    font-size : 16px;
+    line-height: 30px;
+}
+.section3.wrap a:nth-of-type(1) {
+    top : 28vh;
+    left : 8vw;
+    font-size : 14px;
+}
+.section3.wrap a:nth-of-type(2) {
+    top : 36vh;
+    left : 7vw;
+    width : 12vw;
+    height : 4vh;
+    line-height: 4vh;
+    font-size : 14px;
+    padding-right : 2vw;
+}
+.section3.wrap a:nth-of-type(2)::after {
+    top : 1.5vh;
+    right : 2vw;
+    width : 8px;
+    height : 8px;
+}
+.section3.wrap a:nth-of-type(3) {
+    top : 36vh;
+    left : 22vw;
+    width : 12vw;
+    height : 4vh;
+    line-height: 4vh;
+    font-size : 14px;
+    padding-right : 2vw;
+}
+.section3.wrap a:nth-of-type(3)::after {
+    top : 1.5vh;
+    right : 2vw;
+    width : 8px;
+    height : 8px;
+}
+
+/* 교육지원사업 */
+#section4 {
+    width : 100%;
+    height : 48vh;
+}
+.section4.wrap {
+    width : 80vw;
+    height : 48vh;
+}
+.section4.wrap h3 {
+    top : 7vh;
+    left : 13vw;
+    font-size: 24px;
+}
+.section4.wrap img:nth-of-type(1) {
+    top : 6vh;
+    left : 7vw;
+    width : 5vw;
+    height : 5vw;
+}
+.section4.wrap img:nth-of-type(2) {
+    top : 5vh;
+    right : 3vw;
+    width : 28vw;
+    height : 30vh;
+} 
+.section4.wrap p {
+    top : 20vh;
+    left : 7vw;
+    font-size : 16px;
+    line-height: 30px;
+}
+.section4.wrap a:nth-of-type(1) {
+    top : 30vh;
+    left : 8vw;
+    font-size : 14px;
+}
+
+/* 사회복지사업 */
+#section5 {
+    width : 100%;
+    height : 48vh;
+}
+.section5.wrap {
+    width : 80vw;
+    height : 48vh;
+}
+.section5.wrap h3 {
+    top : 7vh;
+    left : 13vw;
+    font-size: 24px;
+}
+.section5.wrap img:nth-of-type(1) {
+    top : 6vh;
+    left : 7vw;
+    width : 5vw;
+    height : 5vw;
+}
+.section5.wrap img:nth-of-type(2) {
+    top : 9vh;
+    right : 8vw;
+    width : 17vw;
+    height : 30vh;
+} 
+.section5.wrap p {
+    top : 20vh;
+    left : 7vw;
+    font-size : 16px;
+    line-height: 30px;
+}
+.section5.wrap a:nth-of-type(1) {
+    top : 30vh;
+    left : 8vw;
+    font-size : 14px;
+}
+/* 봉사상시상 */
+
+#section6 {
+    width : 100%;
+    height : 48vh;
+}
+.section6.wrap {
+    width : 80vw;
+    height : 48vh;
+}
+.section6.wrap h3 {
+    top : 7vh;
+    left : 13vw;
+    font-size: 24px;
+}
+.section6.wrap img:nth-of-type(1) {
+    top : 5.5vh;
+    left : 7vw;
+    width : 5vw;
+    height : 5vw;
+}
+.section6.wrap img:nth-of-type(2) {
+    top : 9vh;
+    right : 3vw;
+    width : 28vw;
+    height : 30vh;
+} 
+.section6.wrap p {
+    top : 20vh;
+    left : 7vw;
+    font-size : 16px;
+    line-height: 30px;
+}
+.section6.wrap a:nth-of-type(1) {
+    top : 30vh;
+    left : 8vw;
+    font-size : 14px;
+}
+
+/* 재단활동소식 */
+#section7 {
+    width : 100%;
+    height : 60vh;
+}
+.section7.wrap {
+    width : 80vw;
+    height : 60vh;
+}
+.section7.wrap ul {
+    width : 80vw;
+    height : 33vh;
+    margin : 17vh auto;
+}
+
+.section7.wrap ul li a img {
+    width : 20vw;
+    height : 27vh;
+    background-size: cover;
+}
+.section7.wrap ul li a span {
+    width : 20vw;
+    height : 25vh;
+    opacity: 0;
+}
+.section7.wrap h3 {
+    top : 7vh;
+    left : 7vw;
+    font-size: 24px;
+}
+.section7.wrap .newsPlus {
+    top : 5.5vh;
+    left : 21vw;
+    font-size : 40px;
+}
+.section7.wrap ul p:nth-of-type(1) {
+    font-size : 16px;
+    margin-top: 16px;
+}
+.section7.wrap ul p:nth-of-type(2) {
+    font-size : 14px;
+    margin-top: 16px;
+}
+
+.slideBtn3 {
+    top : 8vh;
+    right : 8vw;
+    width : 60px;
+    height : 50px;
+}
+.newsPrev {
+    width : 25px;
+    height : 25px;
+}
+.newsNext {
+    width : 25px;
+    height : 25px;
+}
+
+/* 공지사항 */
+#section8 {
+    width : 100%;
+    height : 60vh;
+}
+.section8.wrap {
+    width : 80vw;
+    height : 60vh;
+}
+.section8.wrap ul {
+    width : 80vw;
+    height : 33vh;
+    margin : 20vh auto;
+}
+.section8.wrap ul li { 
+    border-top : 3px solid #000;
+}
+.section8.wrap h3 {
+    top : 7vh;
+    left : 7vw;
+    font-size: 24px;
+}
+.section8.wrap .newsPlus {
+    top : 5.5vh;
+    left : 15.5vw;
+    font-size : 40px;
+}
+.section8.wrap li p {
+    margin : 24px 0;
+}
+.section8.wrap li p:nth-of-type(1) {
+    font-size : 20px;
+}
+.section8.wrap li p:nth-of-type(2) {
+    font-size : 14px;
+}
+.section8.wrap li p:nth-of-type(3) {
+    font-size : 14px;
+}
+.noticePrev {
+    width : 25px;
+    height : 25px;
+}
+.noticeNext {
+    width : 25px;
+    height : 25px;
+}
+}
+
+@media screen and (max-width: 600px) {
+    /* 메인슬라이드 */
+#section1 { 
+    position : relative;
+    width : 100%; 
+    height : 40vh;  
+    
+}
+#sliderList .slider { 
+    position : absolute; 
+    top : 0; 
+    left : 0; 
+    width : 100%; 
+    height : 40vh; 
+    background : no-repeat center / cover; 
+    margin-top : 50px;
+}
+#sliderList .slider1 { background-image : url(../images/slide-bg1-mob.jpg)}
+#sliderList .slider2 { background-image : url(../images/slide-bg2-mob.jpg)}
+#sliderList .slider3 { background-image : url(../images/slide-bg3-mob.jpg)}
+#sliderList .active { z-index : 9; }
+#sliderList div { 
+    position : relative; 
+    width : 100%; 
+    margin : 0 auto;  
+}
+.slider1 p {
+    position : absolute;
+    top : 20vh;
+    left : 12vw;
+    font-size : 16px;
+    font-weight : bold;
+    color : #000;
+}
+.slider1 p span {
+    color : #23a600
+}
+.slider1 a {
+    display : block;
+    position : absolute;
+    width : 120px;
+    height : 20px;
+    top : 28vh;
+    left : 10vw;
+    font-size : 16px;
+    font-weight : bold;
+    color : #000;
+    background : url(../images/icon/go_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y : 0.1em;
+    background-size: contain;
+    transform: scale(0.8);
+}
+.slider2 p:nth-of-type(1) {
+    position : absolute;
+    top : 11vh;
+    left : 10vw;
+    font-size : 14px;
+    font-weight : bold;
+    color : #000;
+}
+.slider2 p span {
+    color : #23a600
+}
+.slider2 p:nth-of-type(2) {
+    position : absolute;
+    top : 23vh;
+    left : 10vw;
+    font-size : 12px;
+    font-weight : bold;
+    color : #000;
+}
+.slider2 a {
+    display : block;
+    position : absolute;
+    width : 120px;
+    height : 20px;
+    top : 31vh;
+    left : 7vw;
+    font-size : 16px;
+    font-weight : bold;
+    color : #000;
+    background : url(../images/icon/go_arrow.png) no-repeat;
+    background-position-x: right;
+    background-position-y : 0.1em;
+    background-size: contain;
+    transform: scale(0.8);
+}
+.slider3 p {
+    top : 20vh;
+    right : 0vw;
+    font-size : 12px;
+    width : 180px;
+}
+.slider3 p br {
+    display : none;
+}
+.slider3 p span {
+    display : block;
+}
+#btnPos a { 
+    position: absolute; 
+    top: 55%; 
+    transform : translateY(0%);
+    z-index: 999;
+    width: 70px; 
+    height: 100px; 
+    color: #fff;
+    line-height: 90px; 
+    font-size: 70px; 
+    text-align: center; 
+}
+#btnPos a span { position : absolute; left : -9999px; }
+#btnPos a.prev { left: 5vw; }
+#btnPos a.prev::after { 
+    display : none; 
+}
+#btnPos a.next { right: 5vw; }
+#btnPos a.next::after { 
+    display : none;
+}
+#btnNum { 
+    display: flex;
+    position: absolute; 
+    width : 69vw;
+    height : 5px;
+    background: rgb(252, 252, 252, 0.5);
+    z-index: 99; 
+    left: 50%; 
+    bottom: -30px;
+    transform : translateX(-40%);
+     }
+#btnNum a { 
+    display: block; 
+    width: 23vw; 
+    height: 5px;
+    margin: 0; 
+    background: #fff; 
+    opacity: 0;
+    color: #000;
+    font-size: 12px; 
+    line-height: 50px; 
+    text-align: center; 
+    z-index: 999;
+}
+
+#btnNum a::after { 
+    position : absolute;
+    top : -22px;
+    left : -39px;
+    content: attr(data-index); 
+    opacity: 1;
+}
+#btnNum a.on { 
+    background: #23a600; 
+    opacity : 1;
+    color: #000; 
+    font-weight: bold; 
+}
+#btnNum a::after.on {
+    opacity: 1;
+}
+#btnNum a span { 
+    position: absolute; 
+    left: -9999px;  
+}
+#playBtn {
+    position : absolute;
+    bottom : -20px ;
+    left : 6vw;
+    z-index : 999;
+    text-indent: -700px;
+}
+#playBtn .play {
+    position : absolute;
+    display : none;
+    width : 15px;
+    height : 18px;
+    border-top: 12px solid #000;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    transform: rotate(-90deg);
+    text-indent: -700px;
+}
+#playBtn .pause {
+    position : absolute;
+    display : block;
+    width : 12px;
+    height : 15px;
+    border-right : 4px solid #000;
+    border-left : 4px solid #000;
+    text-indent: -700px;
+}
+
+
+     /* 섹션 공통 */
+.wrap { width : 80vw; 
+}
+
+/* 재단소개 */
+#section2 {
+    height : 30vh;
+}
+.section2.wrap {
+    width : 80vw;
+    height : 30vh;
+}
+.section2.wrap h3 {
+    top : 0vh;
+    left : 7vw;
+    font-size : 20px;
+}
+.section2.wrap p {
+    top : 8vh;
+    left : 7vw;
+    font-size : 16px;
+}
+.section2.wrap img {
+    display : none;
+    top : 0vh;
+    right : 2vw;
+    width : 20vw;
+    height : 25vh;
+}
+.section2.wrap a {
+    top : 19vh;
+    left : 7vw;
+    width : 35vw;
+    height : 5vh;
+    line-height: 5vh;
+    font-size: 14px;
+}
+
+/* 장학사업 */  
+#section3 {
+    width : 100%;
+    height : 40vh;
+}
+.section3.wrap {
+    width : 100%;
+    height : 40vh;
+}
+.section3.wrap h3 {
+    top : 5.2vh;
+    left : 15vw;
+    font-size: 20px;
+}
+.section3.wrap img:nth-of-type(1) {
+    top : 5.2vh;
+    left : 7vw;
+    width : 7vw;
+    height : 4vh;
+}
+.section3.wrap img:nth-of-type(2) {
+    display : none;
+    top : 9vh;
+    right : 5vw;
+    width : 22vw;
+    height : 30vh;
+} 
+.section3.wrap p {
+    top : 12vh;
+    left : 9vw;
+    font-size : 14px;
+    line-height: 30px;
+}
+.section3.wrap p span {
+    display : block;
+}
+.section3.wrap p br {
+    display : none;
+}
+.section3.wrap a:nth-of-type(1) {
+    top : 26.5vh;
+    left : 13vw;
+    font-size : 12px;
+}
+.section3.wrap a:nth-of-type(2) {
+    top : 32vh;
+    left : 50%;
+    width : 32vw;
+    height : 4vh;
+    line-height: 4vh;
+    font-size : 12px;
+    padding-right : 2vw;
+    transform : translateX(-120%);
+}
+.section3.wrap a:nth-of-type(2)::after {
+    top : 1.7vh;
+    right : 4vw;
+    width : 6px;
+    height : 6px;
+}
+.section3.wrap a:nth-of-type(3) {
+    top : 32vh;
+    left : 50%;
+    width : 32vw;
+    height : 4vh;
+    line-height: 4vh;
+    font-size : 12px;
+    padding-right : 2vw;
+    transform : translateX(-10%);
+}
+.section3.wrap a:nth-of-type(3)::after {
+    top : 1.7vh;
+    right : 4vw;
+    width : 6px;
+    height : 6px;
+}
+
+/* 교육지원사업 */
+#section4 {
+    width : 100%;
+    height : 40vh;
+}
+.section4.wrap {
+    width : 100%;
+    height : 40vh;
+}
+.section4.wrap h3 {
+    top : 6vh;
+    left : 16vw;
+    font-size: 20px;
+}
+.section4.wrap img:nth-of-type(1) {
+    top : 5.2vh;
+    left : 7vw;
+    width : 8vw;
+    height : 6vh;
+}
+.section4.wrap img:nth-of-type(2) {
+    display : none;
+    top : 5vh;
+    right : 3vw;
+    width : 28vw;
+    height : 30vh;
+} 
+.section4.wrap p {
+    top : 15vh;
+    left : 9vw;
+    font-size : 14px;
+    line-height: 30px;
+}
+.section4.wrap a:nth-of-type(1) {
+    top : 26vh;
+    left : 13vw;
+    font-size : 12px;
+}
+
+/* 사회복지사업 */
+#section5 {
+    width : 100%;
+    height : 40vh;
+}
+.section5.wrap {
+    width : 100%;
+    height : 40vh;
+}
+.section5.wrap h3 {
+    top : 6vh;
+    left : 16vw;
+    font-size: 20px;
+}
+.section5.wrap img:nth-of-type(1) {
+    top : 5.2vh;
+    left : 7vw;
+    width : 8vw;
+    height : 6vh;
+}
+.section5.wrap img:nth-of-type(2) {
+    display : none;
+    top : 9vh;
+    right : 8vw;
+    width : 17vw;
+    height : 30vh;
+} 
+.section5.wrap p {
+    top : 15vh;
+    left : 9vw;
+    font-size : 14px;
+    line-height: 30px;
+}
+.section5.wrap a:nth-of-type(1) {
+    top : 26vh;
+    left : 13vw;
+    font-size : 12px;
+}
+/* 봉사상시상 */
+
+#section6 {
+    width : 100%;
+    height : 40vh;
+}
+.section6.wrap {
+    width : 100%;
+    height : 40vh;
+}
+.section6.wrap h3 {
+    top : 6vh;
+    left : 18vw;
+    font-size: 20px;
+}
+.section6.wrap img:nth-of-type(1) {
+    top : 5.2vh;
+    left : 7vw;
+    width : 10vw;
+    height : 6vh;
+}
+.section6.wrap img:nth-of-type(2) {
+    display : none;
+    top : 9vh;
+    right : 3vw;
+    width : 28vw;
+    height : 30vh;
+} 
+.section6.wrap p {
+    top : 15vh;
+    left : 9vw;
+    font-size : 14px;
+    line-height: 30px;
+}
+.section6.wrap a:nth-of-type(1) {
+    top : 26vh;
+    left : 13vw;
+    font-size : 12px;
+}
+
+/* 재단활동소식 */
+#section7 {
+    width : 100%;
+    height : 60vh;
+}
+.section7.wrap {
+    width : 80vw;
+    height : 60vh;
+}
+.section7.wrap ul {
+    width : 80vw;
+    height : 33vh;
+    margin : 12vh auto;
+}
+
+.section7.wrap ul li a img {
+    width : 60vw;
+    height : 30vh;
+    background-size: cover;
+}
+.section7.wrap ul li a span {
+    width : 20vw;
+    height : 25vh;
+    opacity: 0;
+}
+.section7.wrap h3 {
+    top : 4vh;
+    left : 4vw;
+    font-size: 24px;
+}
+.section7.wrap .newsPlus {
+    top : 2.2vh;
+    left : 45vw;
+    font-size : 40px;
+}
+.section7.wrap ul p:nth-of-type(1) {
+    font-size : 16px;
+    margin-top: 16px;
+}
+.section7.wrap ul p:nth-of-type(2) {
+    font-size : 14px;
+    margin-top: 16px;
+}
+
+.slideBtn3 {
+    top : 5vh;
+    right : 5vw;
+    width : 60px;
+    height : 50px;
+}
+.newsPrev {
+    width : 25px;
+    height : 25px;
+}
+.newsNext {
+    width : 25px;
+    height : 25px;
+}
+
+/* 공지사항 */
+#section8 {
+    width : 100%;
+    height : 60vh;
+}
+.section8.wrap {
+    width : 80vw;
+    height : 60vh;
+}
+.section8.wrap ul {
+    width : 80vw;
+    height : 33vh;
+    margin : 18vh auto;
+}
+.section8.wrap ul li { 
+    border-top : none ;
+}
+.section8.wrap .newsList {
+    border-top : 3px solid #000;
+}
+.section8.wrap h3 {
+    top : 4vh;
+    left : 7vw;
+    font-size: 24px;
+}
+.section8.wrap .newsPlus {
+    top : 2.2vh;
+    left : 32vw;
+    font-size : 40px;
+}
+.section8.wrap li p {
+    margin : 24px 0;
+}
+.section8.wrap li p:nth-of-type(1) {
+    font-size : 20px;
+}
+.section8.wrap li p:nth-of-type(2) {
+    font-size : 14px;
+}
+.section8.wrap li p:nth-of-type(3) {
+    font-size : 14px;
+}
+.noticePrev {
+    width : 25px;
+    height : 25px;
+}
+.noticeNext {
+    width : 25px;
+    height : 25px;
+}
+}

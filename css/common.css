@@ -1,0 +1,722 @@
+@charset "utf-8";
+/* 초기화 */
+* { font-family: "malgun";
+box-sizing: border-box;
+}
+body, h1, h2, h3, ul, li, p { margin : 0; padding : 0;}
+li { list-style : none; }
+a { text-decoration: none; }
+.hidden { position : absolute; left : -9999px; }
+
+/* 웹폰트 */
+@font-face { font-family: "malgun";
+    src : url(../font/malgun.ttf);
+}
+
+/* 메인로고 */
+h1 a { 
+    position : absolute;
+    display : block;
+    top : 0;
+    left : 0;
+    height : 100px;
+    width : 240px;
+    background : url(../images/유한재단logo.png) no-repeat center;
+    z-index : 1001;
+    text-indent: -9999px; 
+}
+
+/* 메인네비 */
+.gnbView { display: none; }
+#mobNav { display : none; }
+#comNav .gnb {
+    position: absolute;
+    width : 100%;
+    height : 100px;
+    background : #fff;
+    overflow : hidden;
+}
+#comNav .gnblist {
+    position: relative;
+    display : flex;
+    justify-content: center;
+    width : 100%;
+    background: #fff;
+    z-index : 1000;
+    border-bottom: 1px solid #23a600;
+}
+#comNav .gnblist>li {
+    width : 150px;
+    /* height : 600px; */
+    line-height: 100px;
+    text-align : center;
+    z-index: 999;
+}
+#comNav .gnblist>li a {
+    display : block; 
+    min-width : 100px;
+    height : 100px;
+    /* line-height: 100px; */
+    color : #000; 
+    font-weight : 800;
+}
+#comNav .gnblist>li a.active {
+    color : #23a600;
+    border-bottom : 2px solid #23a600;
+}
+#comNav .gnblist .sublist {
+    /* position: absolute; */
+    width : 150px;
+    height : 499px;
+    
+}
+#comNav .gnblist .sublist>li {
+    width : 150px;
+    height : 50px;
+    line-height : 50px;
+}
+#comNav .gnblist .sublist>li a {
+    font-size : 14px;
+    font-weight: 400;
+    color : rgb(69, 69, 69);
+    /* border : 1px solid #00f; */
+    
+}
+#comNav .gnblist .sublist>li a:hover {
+    color : #000;
+    font-weight : 800;
+    border-bottom : none;
+}
+
+/* 서브네비 */
+#comNav .snb {
+    position : absolute;
+    top : 40px;
+    right : 0;
+    z-index : 1001;
+}
+#comNav .snblist {
+    position : relative;
+    display : flex;
+}
+#comNav .snblist li {  
+    position : relative;
+    padding-right : 20px;
+}
+#comNav .snblist li:nth-of-type(1) {
+    text-transform: uppercase;
+}
+#comNav .snblist li:nth-of-type(1)::after {
+    display : block;
+    position : absolute;
+    content : "";
+    top : 6px;
+    right : 10px;
+    height : 14px;
+    border-right : 1px solid rgb(109, 109, 109);
+}
+#comNav .snblist li:nth-of-type(2)::after {
+    display : block;
+    position : absolute;
+    content : "";
+    top : 6px;
+    right : 10px;
+    height : 14px;
+    border-right : 1px solid rgb(109, 109, 109);
+}
+#comNav .snblist li a {
+    font-size : 13px;
+    color : rgb(109, 109, 109);
+}
+
+/* 푸터 */
+#footer {
+    position: relative;
+    width : 100%;
+    height : 270px;
+    background: #282828;
+}
+.footer.wrap {
+    position: relative;
+    width : 1200px;
+    height : 270px;
+}
+.footer.wrap div {
+    position: absolute;
+    top : 130px;
+    left : 27px;
+}
+.footer.wrap div p {
+    position: relative;
+    color : #fff;
+    float : left;
+    margin-right : 30px;
+}
+.footer.wrap div p::after {
+    position: absolute;
+    display : block;
+    content : "";
+    top : 5px;
+    right : -15px;
+    height : 16px;
+    border-right : 2px solid #fff;
+}
+.footer.wrap div p:nth-of-type(4) {
+    clear: left;
+    margin-top : 15px;
+    font-size : 14px;
+}
+.footer.wrap div p:nth-of-type(3)::after {
+    display : none;
+}
+.footer.wrap div p:nth-of-type(4)::after {
+    display: none;
+}
+.footer.wrap .relatedSite1 {
+    position : absolute;
+    display : flex;
+    top : 68px;
+    left : 26px;
+}
+.footer.wrap .relatedSite1 li a {
+    position: relative;
+    display : block;
+    color : #fff;
+    margin-right : 30px;
+    font-weight : 600;
+}
+.footer.wrap .relatedSite1 li:nth-of-type(3) a img {
+    height : 16px;
+    width : 16px;
+    background-size: cover;
+    transform : translateY(17%);
+    margin-right : 5px;
+}
+.footer.wrap .relatedSite1 li a::after {
+    position: absolute;
+    display : block;
+    content : "";
+    top : 5px;
+    right : -15px;
+    height : 16px;
+    border-right : 2px solid #fff;
+}
+.footer.wrap .relatedSite1 li:nth-of-type(5) a::after {
+    display : none;
+}
+
+.footer.wrap .relatedSite2 {
+    position : absolute;
+    top : 68px;
+    left : 950px;
+}
+.footer.wrap .relatedSite2 h3 {
+    color : #000;
+    background : #fff;
+    width : 200px;
+    height: 35px;
+    line-height: 35px;
+    text-transform: capitalize;
+    padding-left : 10px;
+    border : 1px solid #ccc;
+}
+.footer.wrap .relatedSite2 h3 span {
+    position: absolute;
+    top : 13px;
+    right : 10px;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #000;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.footer.wrap .relatedSite2 .siteList {
+    position: absolute;
+    background : #fff;
+    width : 200px;
+    height : 105px;
+    border : 1px solid #ccc;
+}
+.footer.wrap .relatedSite2 .siteList li a {
+    display : block;
+    width : 200px;
+    height : 35px;
+    border-bottom : 1px solid #ccc;
+    color : #000;
+    font-weight: 600;
+    line-height: 35px;
+    padding-left : 5px;
+}
+.siteList li a:hover {
+    background : #efffeb;
+}
+.footer.wrap .relatedSite2 .siteList li a img {
+    height : 25px;
+    width : 25px;
+    background-size: cover;
+    transform : translateY(20%);
+    margin-right : 5px;
+}
+
+@media screen and (max-width: 1350px) {
+    #comNav .snb {
+        top : 10px;
+    }
+    #comNav .gnblist {
+        padding-left : 100px;
+        width : 100vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* 메인로고 */
+h1 a { 
+    height : 80px;
+    width : 210px;
+}
+
+    .gnbView { 
+        display: block; 
+        position: absolute; 
+        top: 25px; 
+        right: 20px; 
+        z-index: 999;
+    }
+    .gnbView a {
+        display : block;
+        position: relative;
+        width : 35px;
+        height : 35px;
+        background : url(../images/icon/hamburgerBar.png) no-repeat center / contain;
+        text-indent: -9999px;
+    }
+    
+    #comNav { display : none; }
+    #mobNav { 
+        display : block; 
+        position: absolute; 
+        top: 20px; 
+        right: 20px; 
+        z-index: 1002;
+    }
+    
+    #mobNav .close {
+        display : block;
+        position: absolute;
+        width : 30px;
+        height : 30px;
+        top : 25px; 
+        right : 250px;
+        z-index: 1002;
+        background : url(../images/icon/exit.png) no-repeat center / cover;
+        text-indent: -9999px;
+    }
+    #mobNav .gnb {
+        position: fixed; 
+        top: 0px; 
+        right: -300px; 
+        width: 300px; 
+        height: 100vh;
+        background: #fff; 
+        font-size: 24px; 
+        transition: 0.5s right;
+    }
+    #mobNav .gnb.active {
+        right : 0;
+    }
+    #mobNav .gnblist {
+        position: relative;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        width : 100%;
+        height : 65vh;
+        padding-top : 30px;
+        background: #fff;
+        z-index : 1000;
+    }
+    #mobNav .gnblist>li {
+        width : 300px;
+        /* height : 600px; */
+        
+        z-index: 999;
+    }
+    #mobNav .gnblist>li a {
+        display: block;
+        width : 300px;
+        height : 60px;
+        line-height: 60px;
+        text-align : center;
+        font-size : 16px;
+        color : #000;
+    }
+    #mobNav .gnblist>li a:hover {
+        font-weight : 800;
+        background : #c9ffba;
+        border-left : 5px solid #23a600;
+    }
+    #mobNav .sublist {
+        position: absolute;
+        height : 100vh;
+        top: 0px; 
+        right: 300px;
+        font-size : 20px;
+        background : #c9ffba;
+        padding-top : 100px;
+    }
+    #mobNav .snblist {
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        position : absolute;
+        top : 65vh;
+        right : 0;
+        height : 35vh;
+        width : 300px;
+        background : #166201;
+        z-index : 1003;
+    }
+    #mobNav .snblist li a {
+        display : block;
+        width : 300px;
+        height : 50px;
+        line-height: 50px;
+        text-align : center;
+        font-size : 13px;
+        text-transform: capitalize;
+        color :#fff;
+        background : #166201;
+    }
+    #mobNav .gnblist .sublist>li a {
+        border-left : none;
+        font-size : 14px;
+    }
+    
+    /* 푸터 */
+    #footer {
+        width : 100%;
+        height : 35vh;
+    }
+    .footer.wrap {
+        width : 80vw;
+        height : 35vh;
+    }
+    .footer.wrap div {
+        top : 14vh;
+        left : 3vw;
+    }
+    .footer.wrap div p {
+        font-size: 14px;
+        margin-right : 20px;
+    }
+    .footer.wrap div p::after {
+        top : 5px;
+        right : -10px;
+        height : 14px;
+        border-right : 2px solid #fff;
+    }
+    .footer.wrap div p:nth-of-type(4) {
+        clear: left;
+        margin-top : 15px;
+        font-size : 12px;
+    }
+    .footer.wrap div p:nth-of-type(3)::after {
+        display : none;
+    }
+    .footer.wrap div p:nth-of-type(4)::after {
+        display: none;
+    }
+    .footer.wrap .relatedSite1 {
+        position : absolute;
+        display : flex;
+        top : 68px;
+        left : 26px;
+    }
+    .footer.wrap .relatedSite1 li a {
+        font-size : 14px;
+    }
+    .footer.wrap .relatedSite1 li:nth-of-type(3) a img {
+        height : 14px;
+        width : 14px;
+    }
+    .footer.wrap .relatedSite1 li a::after {
+        position: absolute;
+        display : block;
+        content : "";
+        top : 5px;
+        right : -15px;
+        height : 14px;
+        border-right : 2px solid #fff;
+    }
+    .footer.wrap .relatedSite1 li:nth-of-type(5) a::after {
+        display : none;
+    }
+
+    .footer.wrap .relatedSite2 {
+        top : 19vh;
+        left : 60vw;
+    }
+    .footer.wrap .relatedSite2 h3 {
+        width : 16vw;
+        height: 4vh;
+        line-height: 4vh;
+        padding-left : 10px;
+        font-size: 14px;
+        border : 1px solid #ccc;
+    }
+    .footer.wrap .relatedSite2 h3 span {
+        position: absolute;
+        top : 13px;
+        right : 10px;
+        width: 0px;
+        height: 0px;
+        border-top: 8px solid #000;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+    }
+    .footer.wrap .relatedSite2 .siteList {
+        position: absolute;
+        background : #fff;
+        width : 16vw;
+        height : 12vh;
+        border : 1px solid #ccc;
+    }
+    .footer.wrap .relatedSite2 .siteList li a {
+        display : block;
+        width : 16vw;
+        height: 4vh;
+        border-bottom : 1px solid #ccc;
+        line-height: 3vh;
+        padding-left : 5px;
+        font-size : 14px;
+    }
+
+    .footer.wrap .relatedSite2 .siteList li a img {
+        height : 25px;
+        width : 25px;
+        background-size: cover;
+        transform : translateY(20%);
+        margin-right : 5px;
+    }
+}
+
+@media screen and ( max-width: 600px ) {
+/* 메인로고 */
+h1 a { 
+    left : 10px;
+    height : 50px;
+    width : 180px;
+}
+    .gnbView { 
+        top: 10px; 
+        right: 20px; 
+        z-index: 999;
+    }
+    .gnbView a {
+        width : 25px;
+        height : 25px;
+    }
+    #mobNav { 
+        top: 10px; 
+        right: 20px; 
+    }
+    
+    #mobNav .close {
+        display : block;
+        position: absolute;
+        width : 25px;
+        height : 25px;
+        top : 10px; 
+        right : 40vw;
+        z-index: 1002;
+        background : url(../images/icon/exit.png) no-repeat center / cover;
+        text-indent: -9999px;
+    }
+    #mobNav .gnb {
+        position: fixed; 
+        top: 0px; 
+        right: -50vw; 
+        width: 50vw; 
+        font-size: 20px; 
+        transition: 0.5s right;
+    }
+    #mobNav .gnb.active {
+        right : 0;
+    }
+    #mobNav .gnblist {
+        position: relative;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        width : 100%;
+        height : 65vh;
+        padding-top : 30px;
+        background: #fff;
+        z-index : 1000;
+    }
+    #mobNav .gnblist>li {
+        width : 50vw;
+        /* height : 600px; */
+        z-index: 999;
+    }
+    #mobNav .gnblist>li a {
+        display: block;
+        width : 50vw;
+        height : 60px;
+        line-height: 60px;
+        text-align : center;
+        font-size : 16px;
+        color : #000;
+    }
+    #mobNav .gnblist>li a:hover {
+        font-weight : 800;
+        background : #c9ffba;
+        border-left : 5px solid #23a600;
+    }
+    #mobNav .sublist {
+        position: absolute;
+        height : 100vh;
+        top: 0px; 
+        right: 50vw;
+        font-size : 16px;
+        padding-top : 12vh;
+    }
+    #mobNav .snblist {
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        position : absolute;
+        top : 65vh;
+        right : 0;
+        height : 35vh;
+        width : 50vw;
+        background : #166201;
+        z-index : 1003;
+    }
+    #mobNav .snblist li a {
+        display : block;
+        width : 50vw;
+        height : 50px;
+        line-height: 50px;
+        text-align : center;
+        font-size : 13px;
+        text-transform: capitalize;
+        color :#fff;
+        background : #166201;
+    }
+    #mobNav .gnblist .sublist>li a {
+        border-left : none;
+        font-size : 14px;
+    }
+    
+    /* 푸터 */
+    #footer {
+        width : 100%;
+        height : 35vh;
+    }
+    .footer.wrap {
+        width : 90vw;
+        height : 35vh;
+    }
+    .footer.wrap div {
+        top : 20vh;
+        left : 3vw;
+    }
+    .footer.wrap div p {
+        font-size: 12px;
+        margin-right : 20px;
+    }
+    .footer.wrap div p::after {
+        top : 5px;
+        right : -10px;
+        height : 14px;
+        border-right : 2px solid #fff;
+    }
+    .footer.wrap div p:nth-of-type(4) {
+        clear: left;
+        margin-top : 15px;
+        font-size : 12px;
+        
+    }
+    .footer.wrap div p:nth-of-type(3)::after {
+        display : none;
+    }
+    .footer.wrap div p:nth-of-type(4)::after {
+        display: none;
+    }
+    .footer.wrap .relatedSite1 {
+        position : absolute;
+        display : flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        top : 4vh;
+        left : 26px;
+    }
+    .footer.wrap .relatedSite1 li a {
+        font-size : 14px;
+    }
+    .footer.wrap .relatedSite1 li:nth-of-type(3) a img {
+        height : 14px;
+        width : 14px;
+    }
+    .footer.wrap .relatedSite1 li a::after {
+        position: absolute;
+        display : block;
+        content : "";
+        top : 5px;
+        right : -15px;
+        height : 14px;
+        border-right : 2px solid #fff;
+    }
+    .footer.wrap .relatedSite1 li:nth-of-type(5) a::after {
+        display : none;
+    }
+
+    .footer.wrap .relatedSite2 {
+        top : 13vh;
+        left : 50%;
+        transform: translateX(-50%);
+    }
+    .footer.wrap .relatedSite2 h3 {
+        width : 40vw;
+        height: 4vh;
+        line-height: 4vh;
+        padding-left : 10px;
+        font-size: 14px;
+        border : 1px solid #ccc;
+    }
+    .footer.wrap .relatedSite2 h3 span {
+        position: absolute;
+        top : 13px;
+        right : 10px;
+        width: 0px;
+        height: 0px;
+        border-top: 8px solid #000;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+    }
+    .footer.wrap .relatedSite2 .siteList {
+        position: absolute;
+        background : #fff;
+        width : 40vw;
+        height : 12vh;
+        border : 1px solid #ccc;
+    }
+    .footer.wrap .relatedSite2 .siteList li a {
+        display : block;
+        width : 40vw;
+        height: 4vh;
+        border-bottom : 1px solid #ccc;
+        line-height: 3vh;
+        padding-left : 5px;
+        font-size : 14px;
+    }
+
+    .footer.wrap .relatedSite2 .siteList li a img {
+        height : 25px;
+        width : 25px;
+        background-size: cover;
+        transform : translateY(20%);
+        margin-right : 5px;
+    }
+}
